@@ -1,0 +1,21 @@
+.clearfix::after{
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.masterDiv{
+    flex-direction:row;
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    grid-gap: 1px;
+}
+.betaDiva{
+    flex-direction:row;
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    grid-gap:1px;
+}
