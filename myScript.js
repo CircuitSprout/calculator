@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-const divs = document.querySelectorAll('#calculator-body div');
+    const buttons = document.querySelectorAll('.masterDiv button, .betaDiva button');
+    const display = document.getElementById('frutiger');
 
-divs.forEach(div => {
-    if(!div.classList.contains('masterDiv') && !div.classList.contains('betaDiva')){
-        const button = document.createElement('button');
-        button.textContent = div.textContent;
-        div.textContent = '';
-        div.appendChild(button);
-    }
-});
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            display.textContent += button.textContent;
+        });
+    });
 });
