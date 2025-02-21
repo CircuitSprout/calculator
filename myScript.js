@@ -11,14 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const value = button.textContent;
 
             if (value === 'C') {
-                // Clear the display and reset variables
                 display.textContent = '';
                 currentInput = '';
                 operator = '';
                 firstOperand = '';
                 secondOperand = '';
             } else if (value === '=') {
-                // Perform the calculation
                 secondOperand = currentInput;
                 const result = calculate(firstOperand, secondOperand, operator);
                 display.textContent = result;
@@ -27,12 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 firstOperand = '';
                 secondOperand = '';
             } else if (['+', '-', '*', '/'].includes(value)) {
-                // Set the operator and store the first operand
                 operator = value;
                 firstOperand = currentInput;
                 currentInput = '';
             } else {
-                // Append the number to the current input
                 currentInput += value;
                 display.textContent = currentInput;
             }
